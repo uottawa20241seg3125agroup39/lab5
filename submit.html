@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>You are Lied</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        * {
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        html {
+            color: #888;
+            display: table;
+            font-family: sans-serif;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
+
+        h1 {
+            color: #555;
+            font-size: 3em;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0 auto;
+            width: 280px;
+        }
+
+        @media only screen and (max-width: 280px) {
+
+            body,
+            p,h3 {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                margin: 0 0 0.3em;
+            }
+
+
+        }
+        #back {
+            width: 150px;
+            height: 50px;
+            font-size: 1.7vh;
+            font-weight: bold;
+
+            background: red;
+
+            border: none;
+
+            color: black;
+            transition: 3s;
+            cursor: pointer;
+        }
+
+    </style>
+    <script>
+        var colors = ['red', 'orange', 'yellow', 'green', 'blue',"purple"];
+        var index = 0;
+
+        window.onload=function() {
+            setInterval(function() {
+                index = (index + 1) % colors.length;
+                document.getElementById('back').style.background = colors[index];
+            }, 2500);
+            let params = new URLSearchParams(window.location.search);
+            let paramValue = params.get('name');
+            if (paramValue) {
+                $('#roll-title').text('Thank you for your booking, ' + paramValue);
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+<h1 id="roll-title">Thank you for your booking</h1>
+<img src="img/rickroll.gif" >
+<p><h3>But we are closed!</h3></p>
+<!--  <p><button id="back" onclick="window.history.back();">Gonna go back?</button> </p>-->
+</body>
+
+</html>
+<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->
