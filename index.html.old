@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hair Salon</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* 可以在这里添加自定义样式 */
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="img/seg3125_Lab4_Logo.png" alt="logo" style="width:40px;">
+          </a>
+      <a class="navbar-brand" href="#">Hair Salon</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Open Hours</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- 主体内容 -->
+
+  
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Welcome to The 39 Hair Salon.</h2>
+        <p>Walk-in Welcome!</p>
+        <a href="#" class="btn btn-primary">Book Now</a>
+      </div>
+      <div class="col-md-6">
+        <img src="img/seg3125_Lab4_Logo.png" alt="logo" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col">
+      <h3>Menu</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Serivce</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cut</td>
+            <td>$40</td>
+          </tr>
+          <tr>
+            <td>Color</td>
+            <td>$60</td>
+          </tr>
+          <tr>
+            <td>Permed</td>
+            <td>$80</td>
+          </tr>
+          <!-- 添加更多服务项目和价格 -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+    <h2>Our Barber</h2>
+    <p>Senior Barber</p>
+    <div class="card" style="width:400px">
+      <img class="card-img-top" src="img/hertaa1.gif" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">A man with two ears and one head.</p>
+        <a href="#" class="btn btn-primary">Book</a>
+      </div>
+    </div>
+    <br>
+    
+  </div>
+
+  <!-- 底部 -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>Group 39 &copy; Yucheng Chen, Sky Jiang, Haoxin Zeng</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
