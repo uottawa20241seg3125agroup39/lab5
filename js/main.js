@@ -28,7 +28,7 @@ function set_popup_a(){
 function load_appt_form(){
   $('#appt-modal').ready(function() {
     $.ajax({
-        url:'/appointment.html',
+        url:'appointment.html',
         type:'GET',
         dataType:'html',
         success:function(data){
