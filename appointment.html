@@ -31,7 +31,7 @@
 
                 <!-- Modal content -->
                 <div class="modal-body">
-                    <form class="was-validated" action="submit.html">
+                    <form class="was-validated" id="appointment-form-body">
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" required>
@@ -55,7 +55,7 @@
 <!--                        new ! services-->
                         <div class="form-group">
                             <label for="serviceType">Services</label>
-                            <select class="form-control" id="serviceType">
+                            <select class="form-control" id="serviceType" required>
                                 <option value="" disabled selected>Select your service</option>
                                 <option value="Haircut">Haircut</option>
                                 <option value="Coloring">Coloring</option>
@@ -66,7 +66,7 @@
 
                         <div class="form-group">
                             <label for="barber">Barber</label>
-                            <select class="form-control" id="barber">
+                            <select class="form-control" id="barber" required>
                                 <option value="" disabled selected>Select your barber</option>
                                 <option value="Herta">Herta</option>
                                 <option value="Sai Tama">Sai Tama</option>
@@ -88,8 +88,9 @@
                 </div>
 
             </div>
+            <script src="js/appoint.js" defer></script>
         </div>
-        <script src="js/appoint.js" defer></script>
+
     </div>
 </div>
 
