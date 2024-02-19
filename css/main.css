@@ -2,3 +2,9 @@
     width: auto;
     white-space: nowrap;
 }
+
+.barber-img{
+    width:auto;
+    height: 348px;
+    align-items: center;
+}
