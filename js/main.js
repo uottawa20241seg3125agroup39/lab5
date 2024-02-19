@@ -4,6 +4,7 @@ $('#document').ready(function() {
   rickroll_empty_href();
   set_popup_a();
   load_appt_form();
+  load_payment_form();
   console.log('Initialized...');
 });
 
@@ -53,4 +54,32 @@ function load_appt_form(){
       },
     })
   })
+}
+
+function load_payment_form(){
+  $('#payment-modal').ready(function() {
+    $.ajax({
+        url:'payment.html',
+        type:'GET',
+        dataType:'html',
+        success:function(data){
+            let code=$(data).find('#modal-payment');
+            $('#payment-modal').html(code);
+            console.log('Payment Form Loaded');
+        },
+        error:function(){
+          $('#payment-modal').html('<div class="alert alert-danger" role="alert">Error loading payment form. Refresh your page or contact the IT.</div>');
+            console.log('Error loading Payment Form');
+        },
+        complete:function(){
+          $('#payment-modal-not-load-warning').remove();
+        },
+    })
+  })
+}
+
+function global_goPayment(){
+    $('#appt-modal').modal('hide');
+    $('#payment-modal').modal('show');
+    console.log('Go Payment Modal');
 }
