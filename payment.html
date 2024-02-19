@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
     <title>Payment Modal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js" integrity="sha512-7rusk8kGPFynZWu26OKbTeI+QPoYchtxsmPeBqkHIEXJxeun4yJ4ISYe7C6sz9wdxeE1Gk3VxsIWgCZTc+vX3g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 
 
 
@@ -19,7 +23,7 @@
 <!-- The Modal -->
 <div class="modal fade" id="paymentModal">
 
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" id="modal-payment">
         <link rel="stylesheet" href="css/payment.css">
         <div class="modal-content">
 
@@ -33,7 +37,7 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <form id="paymentForm">
+                <form id="paymentForm" class="has-validation">
                     <div class="form-group">
                         <label for="nameOnCard">Name on Card</label>
                         <input type="text" class="form-control" id="nameOnCard" placeholder="First name _ Last name" required  maxlength="50">
@@ -50,14 +54,14 @@
                         <label for="cvv">CVV</label>
                         <input type="text" class="form-control" id="cvv" placeholder="123" required maxlength="4">
                     </div>
-                    <button type="button" class="btn btn-success" id="submitPayment">Place Appointment Order</button>
+                    <button type="submit" class="btn btn-success" id="submitPayment">Place Appointment Order</button>
                 </form>
             </div>
 
 
             <!-- Modal footer -->
-            <div class="modal-footer">
-
+            <div class="modal-footer d-flex">
+                <p class="text-muted align-content-center text-info mr-3 d-inline-flex">Never worry. Your data won't be stored.</p>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
 
@@ -78,9 +82,7 @@
 
 <!--    });-->
 <!--</script>-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js" integrity="sha512-7rusk8kGPFynZWu26OKbTeI+QPoYchtxsmPeBqkHIEXJxeun4yJ4ISYe7C6sz9wdxeE1Gk3VxsIWgCZTc+vX3g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
 
 </body>
 </html>
