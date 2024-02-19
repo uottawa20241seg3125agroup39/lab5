@@ -5,6 +5,7 @@ $(document).ready(function(){
         e.preventDefault();
         await payment_submit();
     });
+    $('#payment-form-go-back-btn').click(payment_goBack);
 
 
     console.log('payment modal loaded...');
@@ -60,4 +61,15 @@ async function payment_submit() {
     //     await new Promise(r => setTimeout(r, 1000));
     // })();
     window.location.href = `submit.html?name=${name}`;
+}
+function canIUse(func){
+    // function definition check code from GPT4
+    return typeof  window[func] === 'function'
+}
+function payment_goBack(){
+    if (canIUse('global_paymentGoBack')){
+        global_paymentGoBack();
+        return;
+    }
+    console.log('Cannot find uplevel function');
 }

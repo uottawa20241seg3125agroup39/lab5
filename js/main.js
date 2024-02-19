@@ -83,3 +83,9 @@ function global_goPayment(){
     $('#payment-modal').modal('show');
     console.log('Go Payment Modal');
 }
+
+function global_paymentGoBack(){
+    $('#payment-modal').modal('hide');
+    $('#appt-modal').modal('show');
+    console.log('Go Appointment Modal');
+}
